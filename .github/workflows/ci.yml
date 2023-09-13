@@ -31,8 +31,8 @@ jobs:
       - name: Run java version
         run: java -version
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
-        with:
-          arguments: clean build
+        uses: gradle/gradle-build-action@v2
+      - name: Execute Gradle build
+        run: ./gradlew clean build
       - name: ls -al
         uses: ls -al build/libs
