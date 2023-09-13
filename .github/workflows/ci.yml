@@ -32,5 +32,5 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: Run build with Gradle Wrapper
         run: ./gradlew build
-#      - name: ls -al
-#        uses: ls -al build/libs
+      - name: ls -al
+        run: ls -al build/libs
