@@ -28,11 +28,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Run java version
-        run: java -version
-      - name: Build with Gradle
+      - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
-      - name: Execute Gradle build
-        run: ./gradlew clean build
+      - name: Run build with Gradle Wrapper
+        run: ./gradlew build
       - name: ls -al
         uses: ls -al build/libs
